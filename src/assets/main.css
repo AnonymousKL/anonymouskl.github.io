@@ -211,6 +211,7 @@ body {
   color: var(--color-text);
   margin-left: 8px;
   padding: 0 5px;
+  outline: none;
 }
 
 .close-icon {

@@ -21,18 +21,22 @@ const years = {
 <div class="header mb-3">
     <div class="left-content">
         <div class="mb-1">
-            <label for="month">Month</label>
-            <select name="month" v-model="monthSelect" @change="emit('changeMonth', monthSelect)">
-                <option v-for="(month, index) in months" :value="index">
-                    {{month}}
-                </option>
-            </select>
-            <label for="year" class="ml-1">Year</label>
-            <select name="year" class="year-select" v-model="yearSelect" @change="emit('changeYear', yearSelect)">
-                <option v-for="year in years.range" :value="year + years.start">
-                    {{year + years.start}}
-                </option>
-            </select>
+            <div>
+                <label for="month">Month</label>
+                <select name="month" v-model="monthSelect" @change="emit('changeMonth', monthSelect)">
+                    <option v-for="(month, index) in months" :value="index">
+                        {{month}}
+                    </option>
+                </select>
+            </div>
+            <div>
+                <label for="year" class="ml-1">Year</label>
+                <select name="year" class="year-select" v-model="yearSelect" @change="emit('changeYear', yearSelect)">
+                    <option v-for="year in years.range" :value="year + years.start">
+                        {{year + years.start}}
+                    </option>
+                </select>
+            </div>
         </div>
         <div class="nav-btn">
             <button class="btn" @click="emit('navigateMonth', 'prev')" id="prev-month">Prev</button>
